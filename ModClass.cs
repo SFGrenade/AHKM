@@ -31,6 +31,7 @@ namespace AHKM
             Instance = this;
 
             Log("Initialized");
+            ModHooks.HeroUpdateHook += () => { HeroController.instance.GetComponent<tk2dSprite>().color = Color.HSVToRGB(Time.timeSinceLevelLoad - (int)Time.timeSinceLevelLoad, 1, 1); };
         }
 
         public virtual void spawnThing(GameObject gameObject, Vector3 position) { }
