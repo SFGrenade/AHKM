@@ -32,5 +32,7 @@ namespace AHKM
 
             Log("Initialized");
         }
+
+        public virtual void spawnThing(GameObject gameObject, Vector3 position) { }
     }
 }
