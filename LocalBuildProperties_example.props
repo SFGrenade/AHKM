@@ -1,5 +1,6 @@
 <Project>
-	<PropertyGroup>
-		<HollowKnightRefs>D:\SteamLibrary\steamapps\common\Hollow Knight\hollow_knight_Data\Managed</HollowKnightRefs>
-	</PropertyGroup>
+  <PropertyGroup>
+    <HollowKnightRefs>D:/SteamLibrary/steamapps/common/Hollow Knight/hollow_knight_Data/Managed/</HollowKnightRefs>
+    <ExportDir>D:/Github_Projects/__Exports/</ExportDir>
+  </PropertyGroup>
 </Project>
