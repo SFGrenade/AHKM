@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<!-- Create a LocalBuildProperties.props file which defines references directories
-  and OutputDirectory (where the post-build event sends the dll to) -->
+	<!-- Create a LocalBuildProperties.props file which defines HollowKnightRefs directory -->
 	<Import Project="LocalBuildProperties_example.props" Condition="Exists('LocalBuildProperties_example.props')" />
 	<Import Project="LocalBuildProperties.props" Condition="Exists('LocalBuildProperties.props')" />
 
