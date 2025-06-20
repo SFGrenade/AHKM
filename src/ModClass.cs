@@ -36,7 +36,7 @@ namespace AHKM
             // I'm sorry
             On.CharmIconList.GetSprite += (orig, self, _) =>
             {
-                orig(self, 11);
+                return orig(self, 11);
             };
             
             ModHooks.LanguageGetHook += (key, title, orig) =>
