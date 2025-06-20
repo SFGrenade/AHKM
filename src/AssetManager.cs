@@ -30,28 +30,7 @@ namespace AHKM
                 {
                     if (!asset) continue;
                     var assetType = asset.GetType();
-                    if (_assets.ContainsKey(assetType))
-                    {
-                        if (_assets[assetType].TryAdd(asset.name, asset))
-                        {
-                            Modding.Logger.LogDebug($"Added asset {asset.name} of type {assetType}");
-                        }
-                        else
-                        {
-                            Modding.Logger.LogError($"Failed to add {asset.name} of type {assetType}!");
-                        }
-                    }
-                    else
-                    {
-                        if (_assets.TryAdd(assetType, new Dictionary<string, Object> { [asset.name] = asset }))
-                        {
-                            Modding.Logger.LogDebug($"Added new sub-dictionary of type {assetType} with initial asset {asset.name}");
-                        }
-                        else
-                        {
-                            Modding.Logger.LogError($"Failed to add new sub-dictionary of type {assetType} with initial asset {assetType} {asset.name}!");
-                        }
-                    }
+                    _assets[assetType][asset.name] = asset;
                 }
             }
         }
@@ -69,7 +48,6 @@ namespace AHKM
                 }
             }
             _assets.Clear();
-            GC.Collect();
         }
 
         /// <summary>
