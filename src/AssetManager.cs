@@ -33,6 +33,8 @@ namespace AHKM
                     var assetType = asset.GetType();
                     if (!_assets.ContainsKey(assetType))
                         _assets[assetType] = new Dictionary<string, Object>();
+                    if (asset is GameObject assetGo)
+                        assetGo.SetActive(false);
                     _assets[assetType][asset.name] = asset;
                 }
             }
